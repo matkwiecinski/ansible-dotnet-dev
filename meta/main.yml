@@ -3,7 +3,6 @@ galaxy_info:
   author: Nick Faulkner <neil@beamly.com>
   description:
   company: Beamly
-  license: ?
   min_ansible_version: 1.2
   platforms:
     - name: Ubuntu
