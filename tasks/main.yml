@@ -1,0 +1,25 @@
+---
+- name: Install dotnet-release APT repo
+  apt_repository:
+    repo: "deb https://apt-mo.trafficmanager.net/repos/dotnet-release/ xenial main"
+    state: present
+
+# https://www.microsoft.com/net/core#linuxubuntu
+- name: Install dotnet-release APT key
+  apt_key: keyserver=keyserver.ubuntu.com id=417A0893
+
+- name: Update the apt-cache
+  apt: update_cache=yes
+
+- name: Install dotnet-dev
+  apt:
+    name: "dotnet-dev-1.0.1"
+    state: latest
+
+- name: Add helper script to install mssql-tools
+  copy:
+    src: install-msssql-tools.sh
+    dest: /opt/beamly/install-msssql-tools.sh
+    owner: root
+    group: root
+    mode: 0777
