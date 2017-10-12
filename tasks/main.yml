@@ -13,7 +13,7 @@
 
 - name: Install dotnet-dev
   apt:
-    name: "dotnet-dev-1.0.1"
+    name: "dotnet-dev-2.0.0-preview1-005977"
     state: latest
 
 - name: Add helper script to install mssql-tools
