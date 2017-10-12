@@ -11,7 +11,7 @@
 - name: Update the apt-cache
   apt: update_cache=yes
 
-- name: Install dotnet-dev
+- name: Install dotnet-sdk
   apt:
     name: "dotnet-sdk-2.0.0"
     state: latest
